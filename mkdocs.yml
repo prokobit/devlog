@@ -1,0 +1,40 @@
+site_name: DevLog
+site_url: https://devlog.prokobit.ovh
+plugins:
+  - tags
+  - blog
+  - search
+theme:
+  name: material
+  icon:
+    logo: material/dev-to
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  palette:
+    scheme: slate
+    primary: green
+    accent: yellow
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+
+markdown_extensions:
+  - attr_list
+  - tables
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
